@@ -1,0 +1,59 @@
+.container {
+    width: 600px;
+    height: 400px;
+    border: 5px solid #333;
+    margin: 30px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    /* flex-direction: row-reverse; untuk ngatur arah atau direction defaultnya adalah row, (row, row-reverse, column, column-reverse) */
+    /* flex-wrap: wrap; kalau udh ga muat bakalan kebawah defaultnya wrap (wrap, reverse wrap) */
+    /* justify-content: flex-start; defaultnya adalah flex-start (flex-start --> mulai dimana, flex-end --> berakhir dimana, center --> di tengah, space-between --> element pertama mepet kiri, elemen terakhir mepet kanan sisanya dibagi rata, space-around --> 1/2 kiri 1/2 kanan, space-evenly --> semuanya sama) */
+    /* align-items: flex-start; (flex-start --> rata keatas, flex-end --> rata kebawah, center --> ditengah, strecth --> akan penuh ketika ga dikasih height, base-line --> ngatur rata tengah berdasarkan tulisan yang ada ditengahnya) */
+    /* align-content: flex-start; sama seperti align items tapi hanya berlaku ketika konten lebih dari satu baris (flex-start, flex-end, center, space-between, space-around) */
+    /* align-self: flex-start; khusus untuk satu konten aja(flex-start-->diatas, flex-end-->dibawah, strecth --> penuh) */
+    /* align-items: flex-start; */
+}
+
+/* .container div.tiga { */
+    /* font-size: 60px; */
+/* } */
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container div {
+    /* width: 100px; */
+    /* height: 100px; */
+    /* ketika ga dikasih width height maka akan menyesuaikan konten */
+    background-color: rgb(19, 133, 255);
+    float: left;
+    margin: 2px;
+    flex: 1;
+}
+
+.container div.dua {
+    /* masalah specificity secara bobot menang mana kalo lebih specific akan menang bobotnya */
+    flex: 3;
+    align-self: flex-end;
+}
+
+/* .container div.satu { */
+    /* order: 3;  */
+    /* urutannya */
+/* } */
+/*  */
+/* .container div.dua { */
+    /* order: 4; */
+/* } */
+/*  */
+/* .container div.tiga { */
+    /* order: 2; */
+/* } */
+/*  */
+/* container div.empat { */
+    /* order: 1; */
+/* } */

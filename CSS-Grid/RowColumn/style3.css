@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+
+.container {
+    /* border: 5px orange solid; */
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* column-gap: 5px; */
+    /* row-gap: 10px; */
+    /* gap: 10px; */
+    /* grid-template-columns: 1fr minmax(200px, 300px) 1fr; */
+    /* grid-template-columns: repeat(auto-fill, 100px) auto-fill --> secara auto menentukan kolom yang ada dalam wadah, ditentukan akhirnya dimana, auto-fit --> sama aja, perbedaannya ketika itemnya lebih sedikit dari lebar container, akan berada di akhir */
+    /* grid-template-columns: 1fr max-content 1fr; min-content --> tulisannya akan dipecah menjadi tiap tiap kata dan akan dicari mana yang paling panjang, max-content --> ambil seluruh katanya */
+    /* grid-template-columns: repeat(4, 1fr) repeat(5, 1.5fr); */
+    /* grid-template-columns: 1fr 2fr 3fr; bisa dikombinasikan -->  grid-template-columns: 1fr 2fr 50px;*/
+    /* grid-auto-columns: 200px; ga mungkin ada column yang implisit, karena kalay ada lebih column dia turun jadi baris*/
+    /* grid-template-rows: 50px 100px 150px; */
+    /* grid-auto-rows: 200px; */
+    /* grid-auto-flow: column;  mengatur penempatan item pada tracknya, ditulis secara implisit*/
+    /* grid-auto-flow: column; */
+    /* grid-template-rows: 50px 30px; */
+    /* grid-auto-columns: 200px;  */
+    
+}
+
+.item {
+    background-color: rgb(138, 289, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(even) {
+    background-color: rgb(255, 142, 142);
+}
